@@ -52,7 +52,8 @@ public class UserWebService {
     public User saveUser(User user) {
         return store.save(user);
     }
-
+    
+    //Updates a user in the system.
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -67,7 +68,8 @@ public class UserWebService {
            
        return store.save(user);
     }
-
+    
+    //Deletes a user from the system.
     @DELETE
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
